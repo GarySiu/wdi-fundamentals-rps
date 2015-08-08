@@ -61,6 +61,56 @@ function playToFive() {
     var computerWins = 0;
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
     /* YOUR CODE HERE */
+    var score = '';
+    while (playerWins + computerWins < 5) {
+        var gameWinner = getWinner(getPlayerMove(),getComputerMove());
+        if (gameWinner === 'player') {
+            console.log('Player wins this round!');
+            playerWins ++;
+            score = 'Score is ' + playerWins + ':' + computerWins;
+            console.log(score);
+        } else if (gameWinner === 'computer') {
+            console.log('Computer wins this round!');
+            computerWins ++;
+            score = 'Score is ' + playerWins + ':' + computerWins;
+            console.log(score);
+
+        } else {
+            console.log('This round was tied');
+            score = 'Score is ' + playerWins + ':' + computerWins;
+            console.log(score);
+
+        }
+    }
     return [playerWins, computerWins];
 }
 
+function playTo(x) {
+    console.log("Let's play Rock, Paper, Scissors");
+    var playerWins = 0;
+    var computerWins = 0;
+    // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
+    /* YOUR CODE HERE */
+    var score = '';
+    while (playerWins + computerWins < x) {
+        var gameWinner = getWinner(getPlayerMove(),getComputerMove());
+        if (gameWinner === 'player') {
+            console.log('Player wins this round!');
+            playerWins ++;
+            score = 'Score is ' + playerWins + ':' + computerWins;
+            console.log(score);
+        } else if (gameWinner === 'computer') {
+            console.log('Computer wins this round!');
+            computerWins ++;
+            score = 'Score is ' + playerWins + ':' + computerWins;
+            console.log(score);
+
+        } else {
+            console.log('This round was tied');
+            score = 'Score is ' + playerWins + ':' + computerWins;
+            console.log(score);
+
+        }
+    }
+    return [playerWins, computerWins];
+}
